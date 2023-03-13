@@ -12,10 +12,10 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>MauiApp1</ApplicationTitle>
+		<ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>de.bludau-it-services.de.chatty</ApplicationId>
+		<ApplicationId>com.companyname.mauiapp1</ApplicationId>
 		<ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fd</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -61,55 +61,53 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fq</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fq</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-maccatalyst|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fq</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-maccatalyst|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fq</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-windows10.0.19041.0|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fc</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-windows10.0.19041.0|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fc</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android33.0|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
-	  <ApplicationVersion>0</ApplicationVersion>
+	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android33.0|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
-	  <ApplicationVersion>0</ApplicationVersion>
+	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
 	</PropertyGroup>
 
 	<ItemGroup>
