@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-ios;net7.0-maccatalyst;net7.0-android33.0</TargetFrameworks>
+		<TargetFrameworks>net7.0-maccatalyst;net7.0-android33.0</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
@@ -12,10 +12,10 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+		<ApplicationTitle>MauiApp1</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauiapp1</ApplicationId>
+		<ApplicationId>de.bludau-it-services.de.chatty</ApplicationId>
 		<ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fd</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -24,7 +24,7 @@
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">22.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
@@ -44,6 +44,7 @@
 		<PackageTags>Chat,Chatting,Kommunikation,Wissen,Bildung</PackageTags>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<DefaultLanguage>de-DE</DefaultLanguage>
+		<AssemblyName>$(MSBuildProjectName) </AssemblyName>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android|AnyCPU'">
@@ -61,53 +62,55 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fq</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fq</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-maccatalyst|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fq</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-maccatalyst|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fq</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-windows10.0.19041.0|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fc</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-windows10.0.19041.0|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fc</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android33.0|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
+	  <ApplicationVersion>0</ApplicationVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android33.0|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
+	  <ApplicationVersion>0</ApplicationVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
