@@ -44,6 +44,7 @@
 		<PackageTags>Chat,Chatting,Kommunikation,Wissen,Bildung</PackageTags>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<DefaultLanguage>de-DE</DefaultLanguage>
+		<AssemblyName>CHAT_GPT</AssemblyName>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android|AnyCPU'">
@@ -104,10 +105,18 @@
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android33.0|AnyCPU'">
 	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+	  <DebugSymbols>False</DebugSymbols>
+	  <AndroidKeyStore>False</AndroidKeyStore>
+	  <ApplicationId>de.bludau-it-services.de.chatty</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android33.0|AnyCPU'">
 	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+	  <DebugSymbols>True</DebugSymbols>
+	  <AndroidKeyStore>False</AndroidKeyStore>
+	  <ApplicationId>de.bludau-it-services.de.chatty</ApplicationId>
 	</PropertyGroup>
 
 	<ItemGroup>

@@ -23,62 +23,104 @@ public class openai_models
 
 public partial class MainPage : ContentPage
 {
-    public string OPENAI_API_KEY = "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";
+    public string OPENAI_API_KEY ="";
      SortedList oSortedList = new SortedList();
     public openai_models SelectedFruit { get; set; }
 
     ObservableCollection<openai_models> openai_model = new ObservableCollection<openai_models>();
     public ObservableCollection<openai_models> Fruits { get { return openai_model; } }
 
+
+    private void txtOpenAIKey_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        // Zugriff auf das Textfeld-Objekt über den Parameter "sender"
+        Editor txtBox = sender as Editor;
+
+        // Überprüfung, ob der Cast erfolgreich war
+        if (txtBox != null)
+        {
+            // Zugriff auf die Eigenschaften des Textfelds
+            string text = txtBox.Text;
+
+            // Verwendung der Eigenschaften des Textfelds
+            if (text.Length > 0)
+            {
+                OPENAI_API_KEY = text;
+                read_ai_models();
+            }
+        }
+    }
+    private void btnRefresh_Click(object sender , EventArgs e)
+    {
+        if (txtOpenAIKey.Text.Length > 0)
+        {
+            read_ai_models();
+        } else
+        {
+
+            Application.Current.MainPage.DisplayAlert("Fehler!", "Kein API Schlüssel vorhanden", "OK");
+        }
+    }
+
+    private void read_ai_models()
+    {
+        // cbModel.GetItemsAsArray();
+        // cbModel.ItemsSource = oSortedList as IList;
+        try
+        {
+            if (OPENAI_API_KEY.Length > 0)
+            {
+
+                Task.Run(async () =>
+                {
+                    // Now on background thread.
+
+                    await getOpenAIModels2Combobox();
+
+                    // cbModel.ItemsSource = gpt_models; // (BindingBase)(oSortedList;
+                    // Report progress to UI.
+                    Dispatcher.Dispatch(() =>
+                    {
+                        cbModel.ItemsSource = openai_model;
+                        cbModel.SelectedIndex = 0;
+
+                        //foreach (string keys in oSortedList.Values)
+                        //{
+                        //    cbModel.ItemsSource = cbModel.SetValue(keys);
+                        //    cbModel.Items.Add("1" + keys);
+                        //    //Console.WriteLine(keys);
+                        //}
+                    }
+                    // Code here is queued to run on MainThread.
+                    // Assuming you don't need to wait for the result,
+                    // don't need await/async here.
+                    );
+
+
+                    // Still on background thread.
+
+                });
+
+            }
+        }
+        catch
+        {
+            Application.Current.MainPage.DisplayAlert("Fehler!", "Konnte AI Modelle nicht einlesen", "OK");
+        }
+
+    }
+
+
     public MainPage()
     {
         InitializeComponent();
- 
+        OPENAI_API_KEY = txtOpenAIKey.Text;
         cbModus.Items.Add("CHAT");
         cbModus.Items.Add("COMPLETION");
         cbModus.Items.Add("BILDER");
         cbModus.SelectedIndex = 0;
-        
-       // cbModel.GetItemsAsArray();
-       // cbModel.ItemsSource = oSortedList as IList;
-        try
-        {
 
-            Task.Run(async () =>
-            {
-                // Now on background thread.
-                
-                await getOpenAIModels2Combobox();
-
-               // cbModel.ItemsSource = gpt_models; // (BindingBase)(oSortedList;
-                // Report progress to UI.
-                Dispatcher.Dispatch(() =>
-                {
-                    cbModel.ItemsSource = openai_model;
-                    cbModel.SelectedIndex = 0;
-
-                    //foreach (string keys in oSortedList.Values)
-                    //{
-                    //    cbModel.ItemsSource = cbModel.SetValue(keys);
-                    //    cbModel.Items.Add("1" + keys);
-                    //    //Console.WriteLine(keys);
-                    //}
-                }
-                // Code here is queued to run on MainThread.
-                // Assuming you don't need to wait for the result,
-                // don't need await/async here.
-                );
-
-
-                // Still on background thread.
-
-            });
-
-        }
-        catch {
-              Application.Current.MainPage.DisplayAlert("Genauigkeit", "Stelle eine Frage!", "OK");
-        }
-
+        read_ai_models();
     }
     
     private async void btnSend_Click(object sender, EventArgs e)
@@ -255,6 +297,12 @@ public partial class MainPage : ContentPage
         if (dTemperature < 0 | dTemperature > 1)
         {
             await Application.Current.MainPage.DisplayAlert("Genauigkeit", "Zwischen 0 und 1", "OK");
+            return "";
+        }
+
+        if (txtQuestion.Text.Length == 0)
+        {
+            await Application.Current.MainPage.DisplayAlert("Fehler", "Keine Frage eingegeben", "OK");
             return "";
         }
 

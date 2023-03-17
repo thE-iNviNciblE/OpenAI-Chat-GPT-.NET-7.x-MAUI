@@ -8,15 +8,16 @@
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center" Visual="Default">
-
-            <Editor x:Name="txtAnswer" HeightRequest="250" Placeholder="Hier erscheinen die Antworten"></Editor>
+            <Editor x:Name="txtOpenAIKey" TextChanged="txtOpenAIKey_TextChanged" Placeholder="Bitte OpenAI API Key eintragen" Text=""></Editor>
+            <Button x:Name="btnRefresh" Text="Login..." Clicked="btnRefresh_Click"></Button>
+            <Editor x:Name="txtQuestion" HeightRequest="250" Placeholder="Bitte stellen Sie eine Frage..."></Editor>
             <Picker x:Name="cbModel" ItemDisplayBinding="{Binding name}" SelectedItem="{Binding SelectedFruit}"></Picker>
             <Picker x:Name="cbModus"></Picker>
             <Button x:Name="btnSend" Text="Senden" SemanticProperties.Hint="Nachricht abschicken" Clicked="btnSend_Click" HorizontalOptions="Center" />
             <Editor x:Name="txtMaxTokens" Text="2048"></Editor>
             <Editor x:Name="txtUserID" Text="1"></Editor>
             <Editor x:Name="txtTemperature" Text="0,3"></Editor>
-            <Editor x:Name="txtQuestion" HeightRequest="250" Placeholder="Bitte stellen Sie eine Frage..."></Editor>
+            <Editor x:Name="txtAnswer" HeightRequest="250" Placeholder="Hier erscheinen die Antworten"></Editor>
 
         </VerticalStackLayout>
     </ScrollView>
