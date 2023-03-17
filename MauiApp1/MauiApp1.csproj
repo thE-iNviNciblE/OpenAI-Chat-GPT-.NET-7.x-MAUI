@@ -32,7 +32,7 @@
 		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
 		<PackageCertificateThumbprint>05C2858364676CB5E330A787C5A8AD3504B9B8CE</PackageCertificateThumbprint>
 		<AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
-		<AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+		<AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
 		<AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
 		<GenerateTestArtifacts>False</GenerateTestArtifacts>
 		<HoursBetweenUpdateChecks>24</HoursBetweenUpdateChecks>
@@ -62,49 +62,49 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fq</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fq</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-maccatalyst|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fq</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-maccatalyst|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fq</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-windows10.0.19041.0|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fc</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-windows10.0.19041.0|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
 	  <ApplicationId>de.openai_chat_gpt.bludau-it-services.de</ApplicationId>
 	  <ApplicationVersion>0</ApplicationVersion>
 	  <ApplicationIdGuid>8213554f-71cf-4662-ad27-70ce878420fc</ApplicationIdGuid>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android33.0|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
 	  <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
 	  <DebugSymbols>False</DebugSymbols>
 	  <AndroidKeyStore>False</AndroidKeyStore>
@@ -112,7 +112,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android33.0|AnyCPU'">
-	  <ApplicationTitle>OpenAI Chat GPT Client von Bludau IT SERVICES</ApplicationTitle>
+	  <ApplicationTitle>OpenAI Chat GPT Client</ApplicationTitle>
 	  <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
 	  <DebugSymbols>True</DebugSymbols>
 	  <AndroidKeyStore>False</AndroidKeyStore>
