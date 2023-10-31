@@ -1,4 +1,4 @@
-# OpenAI Chat GPT-3 .NET Framework 7.0 (MAUI)
+# OpenAI ChatGPT-3 .NET Framework 7.0 (MAUI)
 
 ## Installation
 - Install .NET Framework 7.x for Windows [.NET Framework 7.x Download](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
